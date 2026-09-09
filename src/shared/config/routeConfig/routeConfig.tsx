@@ -38,6 +38,7 @@ import SellerLevelPage from '@/pages/SellerLevel'
 import ShopExpressPage from '@/pages/ShopExpress'
 import ResetPasswordPage from '@/pages/ResetPassword'
 import ContentPagePublicPage from '@/pages/ContentPagePublic'
+import HelpPage from '@/pages/HelpPage'
 
 export enum AppRouter {
     HOME = 'home',
@@ -78,6 +79,7 @@ export enum AppRouter {
     MARKETING_SHOP_EXPRESS = 'marketing-shop-express',
     MARKETING_PURCHASE_HISTORY = 'marketing-purchase-history',
     MARKETING_SELLER_LEVEL = 'marketing-seller-level',
+    HELP = 'help',
     NOT_FOUND = 'not-found',
 }
 export const RoutePath: Record<AppRouter, ELinks> = {
@@ -119,6 +121,7 @@ export const RoutePath: Record<AppRouter, ELinks> = {
     [AppRouter.MARKETING_SHOP_EXPRESS]: ELinks.MARKETING_SHOP_EXPRESS,
     [AppRouter.MARKETING_PURCHASE_HISTORY]: ELinks.MARKETING_PURCHASE_HISTORY,
     [AppRouter.MARKETING_SELLER_LEVEL]: ELinks.MARKETING_SELLER_LEVEL,
+    [AppRouter.HELP]: ELinks.HELP,
     [AppRouter.NOT_FOUND]: ELinks.NOT_FOUND,
 }
 export const routeConfig: Record<AppRouter, RouteProps> = {
@@ -277,5 +280,9 @@ export const routeConfig: Record<AppRouter, RouteProps> = {
     [AppRouter.MARKETING_SELLER_LEVEL]: {
         path: RoutePath[AppRouter.MARKETING_SELLER_LEVEL],
         element: <SellerLevelPage />,
+    },
+    [AppRouter.HELP]: {
+        path: RoutePath[AppRouter.HELP],
+        element: <HelpPage />,
     },
 }

@@ -42,6 +42,7 @@ export enum ELinks {
     MARKETING_SHOP_EXPRESS = '/marketing/shop-express',
     MARKETING_PURCHASE_HISTORY = '/marketing/purchase-history',
     MARKETING_SELLER_LEVEL = '/marketing/seller-level',
+    HELP = '/help',
 
     NOT_FOUND = '*',
 }
