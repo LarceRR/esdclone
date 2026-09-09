@@ -1,7 +1,7 @@
 .page {
     position: relative;
-    width: min(100%, 980px);
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
     padding: 0 0 5rem;
     color: var(--text-color, #333);
 }
@@ -167,6 +167,7 @@
     background: rgba(244, 113, 57, 0.035);
     color: rgba(50, 50, 50, 0.55);
     font-size: 0.78rem;
+    margin-bottom: 40px;
     line-height: 1.4;
     text-align: center;
 }
@@ -183,9 +184,14 @@
 .screenshot img {
     display: block;
     width: 100%;
-    max-width: 100%;
+    max-width: 1280px;
     height: auto;
-    border-radius: 0.65rem;
+    border-radius: 20px;
+    border: 1px solid #d0d0d0;
+
+    @media screen and (max-width: 1280px) {
+        max-width: 100%
+    }
 }
 
 .endNote {
