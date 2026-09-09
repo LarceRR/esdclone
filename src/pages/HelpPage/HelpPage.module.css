@@ -171,6 +171,23 @@
     text-align: center;
 }
 
+.screenshotLoaded {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.screenshot img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.65rem;
+}
+
 .endNote {
     padding: 0.75rem 0.15rem 0;
     color: rgba(50, 50, 50, 0.55);

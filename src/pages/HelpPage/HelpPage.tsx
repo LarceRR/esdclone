@@ -56,7 +56,58 @@ const chapters = [
     },
 ] as const
 
-const Screenshot = ({ children }: { children: string }) => <div className={styles.screenshot}>{children}</div>
+const screenshotFiles: Record<string, string> = {
+    '[скриншот страницы «Вход в систему»]': 'login-page.png',
+    '[скриншот страницы «Дэшборд»]': 'dashboard-page.png',
+    '[скриншот блока «График объёма продаж»]': 'dashboard-sales-chart.png',
+    '[скриншот страницы «Магазин заказ»]': 'sales-page.png',
+    '[скриншот блока «Фильтры заказов»]': 'sales-filters.png',
+    '[скриншот блока «Действия с заказом»]': 'sales-order-actions.png',
+    '[скриншот страницы «Финансовый отчёт»]': 'financial-report-page.png',
+    '[скриншот блока «Сводные показатели»]': 'financial-summary.png',
+    '[скриншот страницы «Мой бумажник»]': 'wallet-page.png',
+    '[скриншот блока «Баланс и операции»]': 'wallet-balance-operations.png',
+    '[скриншот страницы «Фонд записи»]': 'record-fund-page.png',
+    '[скриншот страницы «Хранение продуктов»]': 'product-hold-page.png',
+    '[скриншот блока «Фильтры товаров»]': 'product-hold-filters.png',
+    '[скриншот страницы «Категории товаров»]': 'categories-page.png',
+    '[скриншот блока «Создание категории»]': 'categories-create.png',
+    '[скриншот страницы «Запросы на возврат»]': 'product-returns-page.png',
+    '[скриншот блока «Создать возврат»]': 'product-returns-create.png',
+    '[скриншот страницы «Обзор продукта»]': 'product-overview-page.png',
+    '[скриншот страницы «Склад продуктов»]': 'product-warehouse-page.png',
+    '[скриншот страницы «Импорт товаров»]': 'product-import-page.png',
+    '[скриншот страницы «Настройки магазина»]': 'store-settings-page.png',
+    '[скриншот блока «Общая информация»]': 'store-settings-general.png',
+    '[скриншот страницы «Бизнес-лига»]': 'business-league-page.png',
+    '[скриншот страницы «Магазин экспресс»]': 'shop-express-page.png',
+    '[скриншот страницы «История покупок»]': 'purchase-history-page.png',
+    '[скриншот страницы «Уровень продавца»]': 'seller-level-page.png',
+    '[скриншот страницы «Пользователи»]': 'users-page.png',
+    '[скриншот блока «Добавление пользователя»]': 'users-create.png',
+    '[скриншот страницы «Группы»]': 'groups-page.png',
+    '[скриншот страницы «Страницы»]': 'information-pages-page.png',
+    '[скриншот блока «Создание страницы»]': 'information-pages-create.png',
+}
+
+const Screenshot = ({ children }: { children: string }) => {
+    const [loaded, setLoaded] = useState(false)
+    const fileName = screenshotFiles[children]
+
+    return (
+        <div className={`${styles.screenshot} ${loaded ? styles.screenshotLoaded : ''}`}>
+            {fileName ? (
+                <img
+                    src={`/images/help/${fileName}`}
+                    alt={children}
+                    onLoad={() => setLoaded(true)}
+                    onError={() => setLoaded(false)}
+                />
+            ) : null}
+            {!loaded && children}
+        </div>
+    )
+}
 
 const ChapterLink = ({ href, children }: { href: string; children: string }) => (
     <Link className={styles.pageLink} to={href}>
