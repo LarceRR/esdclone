@@ -4,7 +4,6 @@ import { Link, Navigate } from 'react-router-dom'
 import LayoutContent from '@/widgets/general/LayoutContent'
 import { ELinks } from '@/shared/constants/appLinks.ts'
 import { useAuth } from '@/shared/lib/hooks/useAuth'
-import { useSetPageTitle } from '@/shared/lib/pageTitle/PageTitleContext.tsx'
 import styles from './HelpPage.module.css'
 
 const chapters = [
@@ -69,8 +68,6 @@ const HelpPage = () => {
     const { userRole } = useAuth()
     const rootRef = useRef<HTMLElement | null>(null)
     const [showTopButton, setShowTopButton] = useState(false)
-
-    useSetPageTitle('Справка')
 
     useEffect(() => {
         const root = rootRef.current
