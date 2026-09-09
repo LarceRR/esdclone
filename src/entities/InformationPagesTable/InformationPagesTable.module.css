@@ -1,0 +1,56 @@
+.pagesTable {
+    min-width: 42rem;
+}
+
+.pagesTable th,
+.pagesTable td {
+    text-align: left;
+    white-space: normal;
+}
+
+.colActions {
+    text-align: center !important;
+    width: 7.5rem;
+}
+
+.colUrl {
+    word-break: break-all;
+}
+
+.urlLink {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.urlLink:hover {
+    text-decoration: underline;
+}
+
+.accessBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.55rem;
+    padding: 0 0.65rem;
+    border-radius: 0.45rem;
+    background: rgba(244, 113, 57, 0.12);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.actionsCell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+}
+
+@media (max-width: 767px) {
+    .colUrl,
+    .colAccess {
+        display: none;
+    }
+}

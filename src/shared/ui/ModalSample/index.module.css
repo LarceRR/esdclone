@@ -1,0 +1,58 @@
+.wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 2vw, 1rem);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: min(48rem, calc(100vw - 1.5rem));
+    max-width: calc(100vw - 1rem);
+    max-height: min(85dvh, 80vh);
+    padding: clamp(1rem, 3vw, 2rem);
+    background-color: #fff;
+    border-radius: 0.5rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.35rem);
+    line-height: 1.25;
+}
+
+.hasTitle {
+    justify-content: space-between;
+}
+
+.header > button {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: calc(100vw - 0.75rem);
+        max-height: min(92dvh, 100dvh - 0.75rem);
+        border-radius: 0.75rem;
+    }
+}

@@ -1,0 +1,1 @@
+export { translitSlug } from './translitSlug'

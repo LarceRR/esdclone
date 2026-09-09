@@ -1,0 +1,27 @@
+.wrap {
+    padding: clamp(1rem, 3vw, 2rem);
+    padding-top: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+.actions a,
+.linkButton {
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.linkButton:hover {
+    opacity: 0.85;
+}

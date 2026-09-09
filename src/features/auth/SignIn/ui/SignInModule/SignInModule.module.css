@@ -1,0 +1,116 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 100%;
+    border-radius: clamp(10px, 1.1vw, 14px);
+    background-color: var(--bg-primary);
+    box-shadow: 0 4px 8px 0 rgba(34, 60, 80, 0.2);
+    /* Резиновая ширина: хорошо между 420 и 768, 768–1280, 1280–1920 */
+    width: clamp(18rem, 86vw, 25rem);
+}
+
+@media (min-width: 768px) {
+    .root {
+        width: clamp(32rem, 63vw, 48rem);
+    }
+}
+
+@media (min-width: 1280px) {
+    .root {
+        width: clamp(26rem, 36vw, 32rem);
+    }
+}
+
+@media (min-width: 1920px) {
+    .root {
+        width: clamp(30rem, 28vw, 36rem);
+    }
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 2vw, 1rem);
+    margin-top: clamp(1.25rem, 2.5vw, 2rem);
+    padding-inline: clamp(0.75rem, 2.5vw, 1.5rem);
+}
+
+.logoWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.logoWrap svg {
+    width: 100%;
+    height: auto;
+}
+
+.intro {
+    max-width: 22rem;
+    margin-inline: auto;
+    animation: signInIntroIn 0.35s ease;
+}
+
+.title {
+    margin: 0;
+    font-size: clamp(1.125rem, 1.2vw + 0.85rem, 1.5rem);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.subtitle {
+    margin: 0.35rem 0 0;
+    font-size: clamp(0.8125rem, 0.45vw + 0.72rem, 1rem);
+    line-height: 1.45;
+    opacity: 0.92;
+}
+
+@keyframes signInIntroIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formsViewport {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.formPanel {
+    width: 100%;
+    box-sizing: border-box;
+    transition:
+        opacity 0.35s ease,
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.formPanelActive {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.formPanelInactive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}

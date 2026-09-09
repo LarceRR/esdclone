@@ -1,0 +1,50 @@
+.contentPage {
+    min-height: 100vh;
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+.title {
+    margin-bottom: 24px;
+}
+
+.content :global(p) {
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
+.content :global(h2),
+.content :global(h3) {
+    margin: 24px 0 12px;
+}
+
+.content :global(ul),
+.content :global(ol) {
+    margin: 0 0 16px;
+    padding-left: 24px;
+}
+
+.content :global(blockquote) {
+    margin: 16px 0;
+    padding-left: 16px;
+    border-left: 3px solid #ddd;
+    color: #555;
+}
+
+.content :global(a) {
+    color: var(--primary-color, #d32f2f);
+}
+
+.state {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}

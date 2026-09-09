@@ -1,0 +1,23 @@
+.link {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: left;
+}
+.link.toggled {
+    justify-content: flex-start;
+}
+.link span {
+    font-size: 14px;
+    color: var(--text-color-secondary);
+    white-space: nowrap;
+}
+.selected span {
+    color: var(--primary-color);
+}
+.selected svg path {
+    stroke: var(--primary-color);
+}

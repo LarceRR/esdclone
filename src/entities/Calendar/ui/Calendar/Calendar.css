@@ -1,0 +1,46 @@
+/*header (toolbar)*/
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0.75rem;
+}
+.fc .fc-toolbar-title {
+    font-size: 18px;
+}
+
+/*table*/
+.fc-scrollgrid {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/*slots table*/
+.fc-daygrid-day-events,
+.fc-daygrid-day-frame {
+    background: var(--bg-primary);
+}
+
+/*buttons*/
+.fc .fc-button-group {
+    gap: 0.15rem;
+}
+.fc .fc-button-primary {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--primary-color);
+    transition: all 0.15s;
+    color: var(--text-color-light);
+}
+.fc .fc-button-primary:disabled {
+    color: var(--text-color-light);
+    background: #6e4ea1;
+}
+
+.fc .fc-prev-button,
+.fc .fc-next-button {
+    background: var(--bg-primary);
+}
+
+.fc .fc-button-primary:hover {
+    color: var(--text-color-light);
+    background: #6e4ea1;
+}

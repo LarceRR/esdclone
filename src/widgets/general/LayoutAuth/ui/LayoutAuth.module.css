@@ -1,0 +1,17 @@
+.LayoutAuth {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.75rem, 2.5vw, 2.5rem);
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--bg-gray);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}

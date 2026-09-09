@@ -1,0 +1,450 @@
+.ProductImportModule {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.panel {
+    border: 1px solid rgba(244, 113, 57, 0.12);
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(34, 60, 80, 0.06);
+    padding: 1.2rem 1.5rem;
+}
+
+.panelTitle {
+    margin: 0 0 0.35rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.panelHint {
+    margin: 0 0 1rem;
+    color: rgba(50, 50, 50, 0.65);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.uploadZone {
+    display: flex;
+    min-height: 10rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 1.25rem;
+    border: 2px dashed rgba(244, 113, 57, 0.35);
+    border-radius: 0.75rem;
+    background: rgba(244, 113, 57, 0.04);
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.uploadZone:hover,
+.uploadZoneActive {
+    border-color: var(--primary-color);
+    background: rgba(244, 113, 57, 0.08);
+}
+
+.uploadZone input {
+    display: none;
+}
+
+.uploadIcon {
+    display: flex;
+    width: 2.75rem;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(244, 113, 57, 0.12);
+    color: var(--primary-color);
+}
+
+.uploadTitle {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.uploadHint {
+    margin: 0;
+    color: rgba(50, 50, 50, 0.62);
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.fileMeta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+}
+
+.formatBadge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.7rem;
+    padding: 0 0.65rem;
+    border-radius: 0.4rem;
+    background: rgba(244, 113, 57, 0.12);
+    color: var(--primary-color);
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.fileName {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.fileSize {
+    color: rgba(50, 50, 50, 0.6);
+    font-size: 0.78rem;
+}
+
+.clearFileButton {
+    margin-left: auto;
+    min-height: 2rem;
+    padding: 0 0.85rem;
+    border: 1px solid rgba(50, 50, 50, 0.18);
+    border-radius: 0.45rem;
+    background: #fff;
+    color: rgba(50, 50, 50, 0.78);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.clearFileButton:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.workspaceBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+}
+
+.settingsStack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.settingsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.settingsGroupTitle {
+    margin: 0;
+    color: rgba(50, 50, 50, 0.72);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.fieldGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.fieldWide {
+    grid-column: 1 / -1;
+}
+
+.field label,
+.checkboxField {
+    color: rgba(50, 50, 50, 0.78);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    min-height: 2.25rem;
+    border: 1px solid rgba(50, 50, 50, 0.14);
+    border-radius: 0.45rem;
+    padding: 0 0.7rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: var(--primary-color);
+}
+
+.delimiterAutoHint {
+    color: var(--primary-color);
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.fieldHelp {
+    color: rgba(50, 50, 50, 0.58);
+    font-size: 0.74rem;
+    line-height: 1.35;
+}
+
+.checkboxField {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.25rem;
+}
+
+.checkboxField input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--primary-color);
+}
+
+.previewWrap {
+    overflow-x: auto;
+    border: 1px solid rgba(50, 50, 50, 0.08);
+    border-radius: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.previewTable {
+    width: 100%;
+    min-width: 32rem;
+    border-collapse: collapse;
+}
+
+.previewTable th,
+.previewTable td {
+    padding: 0.65rem 0.55rem;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.08);
+    border-right: 1px solid rgba(50, 50, 50, 0.06);
+    text-align: left;
+    font-size: 0.76rem;
+}
+
+.previewTable th {
+    background: rgba(244, 113, 57, 0.07);
+    color: rgba(50, 50, 50, 0.72);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.previewTable td {
+    color: rgba(50, 50, 50, 0.82);
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.previewTable th:last-child,
+.previewTable td:last-child {
+    border-right: none;
+}
+
+.previewMeta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.metaChip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.6rem;
+    padding: 0 0.55rem;
+    border-radius: 0.4rem;
+    background: rgba(50, 50, 50, 0.06);
+    color: rgba(50, 50, 50, 0.72);
+    font-size: 0.74rem;
+    font-weight: 600;
+}
+
+.mappingTableWrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mappingTable {
+    width: 100%;
+    min-width: 28rem;
+    border-collapse: collapse;
+}
+
+.mappingTable th,
+.mappingTable td {
+    padding: 0.7rem 0.55rem;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.08);
+    text-align: left;
+    font-size: 0.78rem;
+}
+
+.mappingTable th {
+    background: rgba(244, 113, 57, 0.07);
+    color: rgba(50, 50, 50, 0.72);
+    font-weight: 800;
+}
+
+.requiredMark {
+    color: #f56c6c;
+}
+
+.mappingSelect {
+    width: 100%;
+    min-width: 10rem;
+    min-height: 2.25rem;
+    border: 1px solid rgba(50, 50, 50, 0.14);
+    border-radius: 0.45rem;
+    padding: 0 0.65rem;
+    background: #fff;
+    font: inherit;
+    font-size: 0.8rem;
+}
+
+.mappingSelect:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.sampleValue {
+    color: rgba(50, 50, 50, 0.65);
+    font-size: 0.74rem;
+    overflow-wrap: anywhere;
+}
+
+.progressBlock {
+    margin-bottom: 0.75rem;
+}
+
+.progressBar {
+    height: 0.5rem;
+    border-radius: 999px;
+    background: rgba(50, 50, 50, 0.08);
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.25s ease;
+}
+
+.actionsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    justify-content: flex-end;
+}
+
+.primaryAction,
+.secondaryAction {
+    min-height: 2.35rem;
+    padding: 0 1.15rem;
+    border-radius: 0.45rem;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primaryAction {
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.primaryAction:disabled {
+    cursor: default;
+    opacity: 0.45;
+}
+
+.secondaryAction {
+    border: 1px solid rgba(50, 50, 50, 0.2);
+    background: #fff;
+    color: var(--text-color);
+}
+
+.linkButton {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font: inherit;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.linkButton:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+.emptyState {
+    padding: 1.5rem;
+    border: 1px dashed rgba(50, 50, 50, 0.18);
+    border-radius: 0.65rem;
+    color: rgba(50, 50, 50, 0.58);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .panel {
+        padding: 0.9rem;
+    }
+
+    .fieldGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .fileMeta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .clearFileButton {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .actionsRow {
+        flex-direction: column;
+    }
+
+    .primaryAction,
+    .secondaryAction {
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+.GroupsListModule {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+}

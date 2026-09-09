@@ -1,0 +1,33 @@
+.RequiredFields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/*table*/
+.buttonCollapse {
+    background-color: var(--bg-gray);
+    cursor: pointer;
+}
+.buttonCollapse > td {
+    padding: 0.5rem;
+}
+.row > td {
+    padding: 0.5rem 1rem;
+}
+.row > td:first-child {
+    background-color: var(--bg-gray);
+}
+
+/*typography table*/
+.label {
+    font-size: 14px;
+    color: var(--text-color-light);
+}
+.row .label {
+    color: var(--text-color);
+}
+.title {
+    font-size: 14px;
+    color: var(--text-color);
+}

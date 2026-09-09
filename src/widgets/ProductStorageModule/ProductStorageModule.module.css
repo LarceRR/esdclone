@@ -1,0 +1,298 @@
+.ProductStorageModule {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.storageFiltersPanel {
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 769px) {
+    .storageFiltersPanel {
+        max-height: none !important;
+        opacity: 1 !important;
+        overflow: visible !important;
+        transform: none !important;
+    }
+}
+
+.storageFiltersGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.toolbarRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(244, 113, 57, 0.12);
+}
+
+.bulkActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.selectionHint {
+    color: rgba(50, 50, 50, 0.68);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.bulkActionsInFilters {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(244, 113, 57, 0.12);
+}
+
+.mobileCreateWrap {
+    width: 100%;
+}
+
+.mobileCreateWrap>* {
+    width: 100%;
+}
+
+.bulkPrimary,
+.bulkDanger {
+    min-height: 2.25rem;
+    padding: 0 1rem;
+    border-radius: 0.45rem;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.bulkMenuWrap {
+    display: inline-flex;
+}
+
+.bulkPrimary {
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bulkDanger {
+    border: 1px solid #f56c6c;
+    background: #f56c6c;
+    color: #fff;
+}
+
+.productId {
+    color: rgba(50, 50, 50, 0.72);
+    font-size: 0.74rem;
+    line-height: 1.35;
+    white-space: pre-line;
+}
+
+.productNameCell {
+    min-width: 10rem;
+    max-width: 14rem;
+    white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: left !important;
+    line-height: 1.35;
+    vertical-align: top;
+}
+
+.coverImage {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.35rem;
+    object-fit: cover;
+}
+
+.coverPlaceholder {
+    display: inline-flex;
+    width: 3.5rem;
+    height: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.35rem;
+    background: #f3f4f6;
+    color: #9ca3af;
+}
+
+.productTableWrap .productTable td.moneyCell {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.productTableWrap .productTable td.moneyCellEmpty {
+    color: rgba(50, 50, 50, 0.78);
+    font-weight: inherit;
+}
+
+.tagsCell {
+    display: flex;
+    min-width: 9.5rem;
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: flex-start;
+    white-space: normal;
+}
+
+.tagRow {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.toggle {
+    position: relative;
+    box-sizing: border-box;
+    width: 2.1rem;
+    height: 1.15rem;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.toggle::after {
+    position: absolute;
+    top: 50%;
+    left: 0.12rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    content: '';
+    transform: translateY(-50%);
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.toggleOn {
+    background: var(--primary-color);
+}
+
+.toggleOn::after {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transform: translate(1.05rem, -50%);
+}
+
+.toggleOff {
+    background: transparent;
+    border: 1px solid #90939996;
+}
+
+.toggleOff::after {
+    background: #909399;
+    box-shadow: none;
+    transform: translateY(-50%);
+}
+
+.operationCell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+}
+
+.productTableWrap {
+    -webkit-overflow-scrolling: touch;
+}
+
+.productTableWrap .productTable {
+    min-width: 76rem;
+}
+
+.productTableWrap .productTable th.productNameCell,
+.productTableWrap .productTable td.productNameCell,
+.productTableWrap .productTable th.tagsColumn,
+.productTableWrap .productTable td.tagsColumn,
+.productTableWrap .productTable td.productId {
+    white-space: normal !important;
+}
+
+.productTableWrap .productTable th:nth-child(1),
+.productTableWrap .productTable td:nth-child(1) {
+    min-width: 2.5rem;
+}
+
+.productTableWrap .productTable th:nth-child(2),
+.productTableWrap .productTable td:nth-child(2) {
+    min-width: 5.5rem;
+}
+
+.productTableWrap .productTable th:nth-child(3),
+.productTableWrap .productTable td:nth-child(3) {
+    min-width: 4.25rem;
+}
+
+.productTableWrap .productTable th:nth-child(5),
+.productTableWrap .productTable td:nth-child(5),
+.productTableWrap .productTable th:nth-child(6),
+.productTableWrap .productTable td:nth-child(6) {
+    min-width: 6.5rem;
+}
+
+.productTableWrap .productTable th.tagsColumn,
+.productTableWrap .productTable td.tagsColumn {
+    min-width: 10.5rem;
+}
+
+.productTableWrap .productTable td.moneyCell {
+    min-width: 5.75rem;
+}
+
+.productTableWrap .productTable th:nth-child(13),
+.productTableWrap .productTable td:nth-child(13) {
+    min-width: 5.5rem;
+}
+
+@media (max-width: 768px) {
+    .storageFiltersPanelOpen {
+        max-height: none !important;
+    }
+
+    .storageFiltersGrid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .storageFilterActions {
+        flex-direction: column;
+    }
+
+    .storageFilterActions>* {
+        width: 100%;
+    }
+
+    .bulkActionsInFilters {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+
+    .bulkActionsInFilters .bulkMenuWrap,
+    .bulkActionsInFilters .bulkPrimary {
+        width: 100%;
+    }
+
+    .productTableWrap .productTable th,
+    .productTableWrap .productTable td {
+        padding: 0.55rem 0.35rem;
+        font-size: 0.72rem;
+    }
+}

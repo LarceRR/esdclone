@@ -1,0 +1,59 @@
+import React from 'react'
+
+export interface BorderAllRoundedIconProps {
+    size?: number
+    color?: string
+    background?: string
+    opacity?: number
+    rotation?: number
+    shadow?: number
+    flipHorizontal?: boolean
+    flipVertical?: boolean
+    padding?: number
+}
+
+export const BorderAllRoundedIcon: React.FC<BorderAllRoundedIconProps> = ({
+    size = undefined,
+    color = 'var(--primary-color)',
+    background = 'transparent',
+    opacity = 1,
+    rotation = 0,
+    shadow = 0,
+    flipHorizontal = false,
+    flipVertical = false,
+    padding = 0,
+}) => {
+    const transforms: string[] = []
+    if (rotation !== 0) transforms.push(`rotate(${rotation}deg)`)
+    if (flipHorizontal) transforms.push('scaleX(-1)')
+    if (flipVertical) transforms.push('scaleY(-1)')
+
+    const viewBoxSize = 24 + padding * 2
+    const viewBoxOffset = -padding
+    const viewBox = `${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`
+
+    return (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox={viewBox}
+            width={size}
+            height={size}
+            fill='none'
+            style={{
+                color,
+                opacity,
+                transform: transforms.length ? transforms.join(' ') : undefined,
+                filter: shadow > 0 ? `drop-shadow(0 ${shadow}px ${shadow * 2}px rgba(0,0,0,0.3))` : undefined,
+                backgroundColor: background !== 'transparent' ? background : undefined,
+            }}
+            aria-hidden
+        >
+            <path
+                fill='currentColor'
+                d='M15 21q-.825 0-1.412-.587T13 19v-4q0-.825.588-1.412T15 13h4q.825 0 1.413.588T21 15v4q0 .825-.587 1.413T19 21zm0-10q-.825 0-1.412-.587T13 9V5q0-.825.588-1.412T15 3h4q.825 0 1.413.588T21 5v4q0 .825-.587 1.413T19 11zM5 11q-.825 0-1.412-.587T3 9V5q0-.825.588-1.412T5 3h4q.825 0 1.413.588T11 5v4q0 .825-.587 1.413T9 11zm0 10q-.825 0-1.412-.587T3 19v-4q0-.825.588-1.412T5 13h4q.825 0 1.413.588T11 15v4q0 .825-.587 1.413T9 21z'
+            />
+        </svg>
+    )
+}
+
+export default BorderAllRoundedIcon

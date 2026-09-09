@@ -1,0 +1,794 @@
+.SalesListModule {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 12rem;
+}
+
+.mobileFilterBar {
+    display: none;
+}
+
+.mobileTabsInFilters {
+    display: none;
+}
+
+.tabsPanel,
+.filtersPanel,
+.tablePanel {
+    border: 1px solid rgba(244, 113, 57, 0.12);
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(34, 60, 80, 0.06);
+}
+
+.tabsPanel {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 0.9rem 1rem;
+}
+
+.tab,
+.tabActive,
+.mobileFilterButton,
+.mobileFilterButtonActive,
+.primaryButton,
+.secondaryButton,
+.bulkButton,
+.createButton,
+.selectByFilterButton,
+.operationButton,
+.pagination button,
+.pagination select,
+.pagination input {
+    min-height: 2.25rem;
+    border: 1px solid rgba(244, 113, 57, 0.18);
+    border-radius: 0.45rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.tab,
+.tabActive {
+    min-width: 6.5rem;
+    padding: 0 1rem;
+}
+
+.tabActive,
+.mobileFilterButtonActive,
+.primaryButton,
+.operationButton,
+.pageActive {
+    border-color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+.filtersPanel {
+    padding: 1.2rem 1.5rem;
+}
+
+.filtersGrid {
+    display: grid;
+    grid-template-columns: minmax(170px, 1fr) minmax(190px, 1fr) minmax(190px, 1fr) minmax(300px, 1.5fr);
+    gap: 1rem;
+    align-items: end;
+}
+
+.filterField,
+.dateRange {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.filterField span,
+.dateRange>span {
+    white-space: nowrap;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.filterField input,
+.filterField select,
+.dateRange input,
+.pagination select,
+.pagination input {
+    width: 100%;
+    min-height: 2.25rem;
+    border: 1px solid rgba(50, 50, 50, 0.14);
+    border-radius: 0.45rem;
+    padding: 0 0.7rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.filterField input:focus,
+.filterField select:focus,
+.dateRange input:focus {
+    border-color: var(--primary-color);
+}
+
+.dateRange {
+    grid-template-columns: auto minmax(110px, 1fr) auto minmax(110px, 1fr);
+}
+
+.dateRange b {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.filterActions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.tableToolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.tableToolbarActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.bulkStatusBar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+    margin-bottom: 0.85rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid rgba(244, 113, 57, 0.22);
+    border-radius: 0.55rem;
+    background: rgba(244, 113, 57, 0.05);
+}
+
+.bulkHint {
+    font-size: 0.8rem;
+    color: rgba(34, 60, 80, 0.72);
+    line-height: 1.35;
+}
+
+.selectByFilterButton {
+    padding: 0 0.85rem;
+    white-space: nowrap;
+}
+
+.selectByFilterBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.85rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.selectByFilterLink {
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: var(--primary-color);
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.selectByFilterLink:hover {
+    color: #d85f28;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.formField span {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: rgba(50, 50, 50, 0.72);
+}
+
+.formField input,
+.formField select {
+    width: 100%;
+    min-height: 2.25rem;
+    border: 1px solid rgba(50, 50, 50, 0.14);
+    border-radius: 0.45rem;
+    padding: 0 0.7rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.formField input:focus,
+.formField select:focus {
+    border-color: var(--primary-color);
+}
+
+.formProductBlock {
+    padding: 0 1rem 1rem;
+}
+
+.orderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    min-width: 5rem;
+    padding: 0 1rem;
+}
+
+.secondaryButton:hover,
+.tab:hover,
+.pagination button:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.tablePanel {
+    padding: 1.2rem 1.5rem 1rem;
+}
+
+.bulkButton,
+.createButton {
+    padding: 0 1rem;
+    background: rgba(244, 113, 57, 0.12);
+    color: var(--primary-color);
+}
+
+.tableWrap {
+    overflow-x: auto;
+    border: 1px solid rgba(50, 50, 50, 0.08);
+    border-radius: 0.75rem;
+}
+
+.ordersTable {
+    width: 100%;
+    min-width: 980px;
+    border-collapse: collapse;
+}
+
+.ordersTable th,
+.ordersTable td {
+    padding: 0.85rem 0.7rem;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.08);
+    border-right: 1px solid rgba(50, 50, 50, 0.06);
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.78rem;
+}
+
+.ordersTable th {
+    background: rgba(244, 113, 57, 0.07);
+    color: rgba(50, 50, 50, 0.72);
+    font-weight: 800;
+}
+
+.ordersTable td {
+    color: rgba(50, 50, 50, 0.78);
+}
+
+.ordersTable tr:nth-child(even) td {
+    background: rgba(244, 113, 57, 0.025);
+}
+
+.ordersTable tr:hover td {
+    background: rgba(244, 113, 57, 0.07);
+}
+
+.ordersTable th:last-child,
+.ordersTable td:last-child {
+    border-right: none;
+}
+
+.emptyCell {
+    padding: 2rem !important;
+    color: rgba(50, 50, 50, 0.55) !important;
+    text-align: center !important;
+}
+
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.55rem;
+    padding: 0 0.65rem;
+    border-radius: 0.45rem;
+    background: rgba(244, 113, 57, 0.12);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.operationButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 7rem;
+    padding: 0 0.75rem;
+    line-height: 1;
+}
+
+.operationArrow {
+    width: 0;
+    height: 0;
+    color: inherit;
+    border-top: 4px solid currentColor;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    flex: 0 0 auto;
+}
+
+.operationCell {
+    position: relative;
+}
+
+.operationMenu {
+    position: absolute;
+    top: calc(100% - 0.35rem);
+    right: 0.7rem;
+    z-index: 5;
+    display: flex;
+    min-width: 12rem;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(244, 113, 57, 0.14);
+    border-radius: 0.6rem;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(34, 60, 80, 0.14);
+}
+
+.operationMenu button {
+    border: none;
+    background: #fff;
+    padding: 0.75rem 0.9rem;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.operationMenu button:hover {
+    background: rgba(244, 113, 57, 0.08);
+    color: var(--primary-color);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+    color: rgba(50, 50, 50, 0.72);
+    font-size: 0.78rem;
+}
+
+.paginationMeta,
+.paginationPages,
+.paginationJump {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+}
+
+.pagination button {
+    min-width: 2rem;
+    padding: 0 0.5rem;
+}
+
+.pagination button:disabled {
+    cursor: default;
+    opacity: 0.45;
+}
+
+.pagination select {
+    width: auto;
+    min-width: 7.5rem;
+    padding-right: 1.8rem;
+}
+
+.pagination input {
+    width: 3.25rem;
+    text-align: center;
+}
+
+.modalBody {
+    position: relative;
+    min-height: 10rem;
+}
+
+.orderModal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.modalBlock {
+    overflow: hidden;
+    border: 1px solid rgba(244, 113, 57, 0.14);
+    border-radius: 0.9rem;
+    background: #fff;
+}
+
+.modalBlock h3 {
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid rgba(244, 113, 57, 0.1);
+    background: rgba(244, 113, 57, 0.045);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.summaryGrid,
+.customerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.customerGrid {
+    border-top: 1px solid rgba(244, 113, 57, 0.1);
+    background: rgba(244, 113, 57, 0.02);
+}
+
+.orderInfo {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem;
+    border-radius: 0.65rem;
+    background: rgba(50, 50, 50, 0.025);
+}
+
+.orderAmount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.orderInfo span,
+.orderAmount span {
+    color: rgba(50, 50, 50, 0.72);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.orderInfo b,
+.orderAmount b {
+    min-width: 0;
+    color: rgba(50, 50, 50, 0.82);
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+.modalStatusBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 0.45rem;
+    border-radius: 0.35rem;
+    background: var(--primary-color);
+    color: #fff !important;
+}
+
+.modalBottomGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.42fr);
+    gap: 1rem;
+}
+
+.productCard {
+    display: grid;
+    grid-template-columns: 5rem minmax(7rem, 1fr) minmax(8rem, 1fr) minmax(10rem, 1.25fr) 4rem;
+    gap: 0.85rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.productCard img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.7rem;
+    object-fit: cover;
+}
+
+.productInfo {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.productInfo span {
+    color: rgba(50, 50, 50, 0.58);
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.productInfo b {
+    color: rgba(50, 50, 50, 0.84);
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.amountList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1rem;
+}
+
+.amountList .orderAmount:last-child {
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(244, 113, 57, 0.16);
+    color: var(--primary-color);
+}
+
+.amountList .orderAmount:last-child b {
+    color: var(--primary-color);
+}
+
+.logisticsModal {
+    display: flex;
+    flex-direction: column;
+}
+
+.logisticsItem {
+    position: relative;
+    padding: 0.9rem 0 0.9rem 1.25rem;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.1);
+}
+
+.logisticsItem:last-child {
+    border-bottom: none;
+}
+
+.logisticsItem::before {
+    position: absolute;
+    top: 1.15rem;
+    left: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+    content: '';
+}
+
+.logisticsItem time {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: rgba(50, 50, 50, 0.55);
+    font-size: 0.8rem;
+}
+
+.logisticsItem p {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.45;
+}
+
+.logisticsItem p span {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+@media (max-width: 1180px) {
+    .filtersGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .modalBottomGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .productCard {
+        grid-template-columns: 5rem repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .mobileFilterBar {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        height: 0;
+        justify-content: flex-end;
+        margin-top: -2.65rem;
+        margin-bottom: 2.15rem;
+        padding-right: 0.25rem;
+    }
+
+    .mobileFilterButton,
+    .mobileFilterButtonActive {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.45rem;
+        min-height: 2.25rem;
+        padding: 0;
+        border: none !important;
+        background: transparent !important;
+        color: var(--primary-color) !important;
+        font-weight: 600;
+    }
+
+    .tabsPanel {
+        display: none;
+    }
+
+    .tablePanel {
+        position: relative;
+        z-index: 1;
+        padding: 0.8rem;
+    }
+
+    .filtersPanel {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 0.8rem;
+        transform: translateY(-0.35rem);
+        transition:
+            max-height 0.28s ease,
+            opacity 0.2s ease,
+            padding 0.28s ease,
+            transform 0.28s ease;
+    }
+
+    .filtersPanelOpen {
+        position: relative;
+        z-index: 2;
+        max-height: 38rem;
+        opacity: 1;
+        padding: 0.8rem;
+        overflow: visible;
+        transform: translateY(0);
+    }
+
+    .mobileTabsInFilters {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        padding-bottom: 0.75rem;
+        margin-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(244, 113, 57, 0.12);
+    }
+
+    .mobileTabsInFilters .tab,
+    .mobileTabsInFilters .tabActive {
+        flex: 1 0 auto;
+        min-width: max-content;
+    }
+
+    .filtersGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .filterField,
+    .dateRange {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+
+    .dateRange b {
+        text-align: center;
+    }
+
+    .filterActions {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton,
+    .bulkButton,
+    .createButton,
+    .selectByFilterButton {
+        width: 100%;
+    }
+
+    .tableToolbarActions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .bulkStatusBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .paginationMeta {
+        justify-content: space-between;
+    }
+
+    .paginationPages {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .paginationJump {
+        justify-content: center;
+    }
+
+    .orderAmount {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .orderAmount b {
+        text-align: left;
+    }
+
+    .productCard {
+        grid-template-columns: 1fr;
+    }
+
+    .productCard img {
+        width: 100%;
+        height: 9rem;
+    }
+}

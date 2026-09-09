@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Опорные ширины: 420, 768, 1280, 1920 — между ними резина через clamp / vw */
+:root {
+    --primary-color: #f47139;
+    --text-color: #323232;
+    --text-color-secondary: #f47139;
+    --text-color-light: #ffffff;
+    --text-color-dark: #333333;
+    --bg-primary: #f4713915;
+    --bg-secondary: #f8fffc;
+    --bg-gray: #f4f4f4;
+
+    --transition-primary: 0.3s ease-in-out;
+
+    /* Отступы контента: плавно от узких до широких экранов */
+    --layout-page-padding: clamp(0.75rem, 0.55rem + 1.1vw, 1.75rem);
+    --layout-section-gap: clamp(0.75rem, 0.5rem + 1.2vw, 1.5rem);
+
+    /* Боковая панель: чуть уже на мобилке, комфортнее от 1280 */
+    --size-navbar: clamp(3.75rem, 3.2rem + 1.4vw, 4.5rem);
+    --size-navbar-toggled: clamp(14rem, 9rem + 9vw, 16.5rem);
+
+    --font-nav-label: clamp(0.8125rem, 0.74rem + 0.25vw, 0.9375rem);
+}
+
+@media (min-width: 420px) {
+    :root {
+        --layout-page-padding: clamp(0.875rem, 0.65rem + 1vw, 1.75rem);
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --layout-page-padding: clamp(1rem, 0.55rem + 1.15vw, 1.75rem);
+    }
+}
+
+/** Десктоп: полный логотип в развёрнутом сайдбаре — шире колонка под ~129px ширины знака */
+@media (min-width: 769px) {
+    :root {
+        --size-navbar-toggled: clamp(17.5rem, 12rem + 12vw, 18rem);
+        --size-navbar: clamp(4rem, 3.5rem + 1vw, 5.25rem);
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --layout-page-padding: clamp(1.125rem, 0.5rem + 1vw, 1.75rem);
+    }
+}
+
+@media (min-width: 1920px) {
+    :root {
+        --layout-page-padding: 1.75rem;
+        --size-navbar-toggled: 21rem;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Плавный базовый кегль между мобильным и десктопом */
+    font-size: clamp(14px, 0.82rem + 0.35vw, 16px);
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: #FEEDE5;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--text-color);
+    background-color: #FEEDE5;
+}
+
+#root {
+    height: 100%;
+    overflow: hidden;
+    background-color: #FEEDE5;
+}
+
+/* typography — шкала с привязкой к 420–1920 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: clamp(1.5rem, 1.05rem + 1.6vw, 2rem);
+    font-weight: 500;
+}
+
+h2 {
+    font-size: clamp(1.35rem, 1rem + 1.2vw, 1.75rem);
+    font-weight: 600;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 0.95rem + 0.9vw, 1.5rem);
+    font-weight: 600;
+}
+
+h4 {
+    font-size: clamp(1.05rem, 0.9rem + 0.55vw, 1.25rem);
+    font-weight: 500;
+}
+
+h5 {
+    font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.125rem);
+    font-weight: 500;
+}
+
+h6 {
+    font-size: clamp(0.875rem, 0.82rem + 0.25vw, 1rem);
+    font-weight: 500;
+}
+
+p {
+    font-size: clamp(0.8125rem, 0.78rem + 0.2vw, 0.9375rem);
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+span {
+    font-size: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    font-size: inherit;
+}

@@ -1,0 +1,10 @@
+.SettingField {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}

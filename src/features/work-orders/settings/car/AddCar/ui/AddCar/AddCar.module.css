@@ -1,0 +1,26 @@
+.modal {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: min(47rem, calc(100vw - 1.5rem));
+    max-width: min(750px, calc(100vw - 1rem));
+    max-height: min(85dvh, 650px);
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    background-color: #fff;
+    border-radius: 0.5rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: calc(100vw - 0.75rem);
+        max-width: none;
+        max-height: min(92dvh, 100dvh - 0.75rem);
+        border-radius: 0.75rem;
+    }
+}

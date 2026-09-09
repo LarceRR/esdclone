@@ -1,0 +1,41 @@
+.btn {
+    flex-shrink: 0;
+}
+
+.btnIconOnly {
+    flex-shrink: 0;
+}
+
+.tooltipHost {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.iconBox {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.iconBox svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+.itemText {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: var(--font-nav-label, 14px);
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--text-color);
+    white-space: nowrap;
+    text-align: left;
+}

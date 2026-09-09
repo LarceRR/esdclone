@@ -1,0 +1,14 @@
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.skeletonCell {
+    padding: 0.5rem 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .skeletonCell {
+        padding: 0.375rem 0.5rem;
+    }
+}

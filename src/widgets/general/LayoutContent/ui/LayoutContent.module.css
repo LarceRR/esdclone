@@ -1,0 +1,63 @@
+.LayoutContent {
+    display: flex;
+
+    flex: 1;
+
+    height: 100%;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background-color: var(--bg-secondary, #f8fffc);
+}
+
+@media (max-width: 768px) {
+    .LayoutContent {
+        flex-direction: column;
+    }
+}
+
+.sidebarShell {
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    width: 100%;
+
+    padding: var(--layout-page-padding, 1rem);
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+    position: relative;
+}
+
+.desktopHeaderRow {
+    display: contents;
+}
+
+@media (min-width: 1280px) {
+    .desktopHeaderRow {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+}

@@ -1,0 +1,42 @@
+.EditorModule {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    .actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,39 @@
+.wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.iconBtn {
+    padding: 2px;
+}
+
+.menuPanel {
+    position: fixed;
+    z-index: 1400;
+    min-width: 10rem;
+    box-sizing: border-box;
+    padding: 0.35rem 0;
+    background: var(--bg-secondary, #f8fffc);
+    border: 1px solid #f4713940;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px #f4713920;
+}
+
+.logoutBtn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: 0.875rem;
+    text-align: left;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.logoutBtn:hover {
+    background: #f471391f;
+    color: var(--primary-color);
+}

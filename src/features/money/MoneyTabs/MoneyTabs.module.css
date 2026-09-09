@@ -1,0 +1,14 @@
+.MoneyTabs > button {
+    border: inherit;
+    border-radius: 0;
+    opacity: 0.5;
+}
+.MoneyTabs > button:hover {
+    border: inherit;
+}
+.MoneyTabs > button:disabled {
+    opacity: 1;
+    color: var(--text-color);
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+}

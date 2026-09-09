@@ -1,0 +1,130 @@
+.WalletWithdrawModule {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}
+
+.formPanel {
+    max-width: 36rem;
+    border: 1px solid rgba(244, 113, 57, 0.12);
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(34, 60, 80, 0.06);
+    padding: 1.5rem 1.75rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fieldLabel {
+    color: rgba(50, 50, 50, 0.78);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.required {
+    color: #dc3545;
+}
+
+.fieldControl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.select,
+.input,
+.inputWithSuffix {
+    width: 100%;
+    min-height: 2.25rem;
+    border: 1px solid rgba(50, 50, 50, 0.14);
+    border-radius: 0.45rem;
+    padding: 0 0.7rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.select:focus,
+.input:focus,
+.inputWithSuffix:focus-within {
+    border-color: var(--primary-color);
+}
+
+.inputWithSuffix {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 0.35rem;
+}
+
+.inputWithSuffix input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    font-size: 0.8rem;
+}
+
+.inputWithSuffix b {
+    flex-shrink: 0;
+    padding: 0.2rem 0.55rem;
+    border-radius: 0.35rem;
+    background: rgba(244, 113, 57, 0.12);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.hint {
+    display: inline-flex;
+    width: fit-content;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.35rem;
+    background: rgba(31, 157, 85, 0.12);
+    color: #1f9d55;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.submitButton {
+    align-self: flex-start;
+    min-height: 2.35rem;
+    min-width: 8rem;
+    margin-top: 0.25rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.45rem;
+    background: var(--primary-color);
+    color: #fff;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+}

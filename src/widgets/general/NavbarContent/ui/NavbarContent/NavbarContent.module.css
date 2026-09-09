@@ -1,0 +1,137 @@
+.NavbarContent {
+    padding: clamp(0.75rem, 0.5rem + 1vw, 1.25rem) clamp(0.5rem, 0.35rem + 0.8vw, 0.75rem) clamp(1rem, 0.6rem + 1.5vw, 2rem);
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    gap: 0.75rem;
+    background-color: #fdc7b154;
+    transition: var(--transition-primary);
+}
+
+.NavbarContent.narrow {
+    width: var(--size-navbar);
+}
+
+.NavbarContent.wide {
+    width: var(--size-navbar-toggled);
+}
+
+.headerRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+
+.headerRowDrawer {
+    justify-content: flex-start;
+}
+
+.headerRowCentered {
+    justify-content: flex-start;
+}
+
+.headerRowCentered .headerLogo {
+    flex: 0 0 auto;
+}
+
+.headerRowCollapsed {
+    justify-content: center;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+}
+
+.headerLogoCompact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.headerLogoCompactLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+.logoCupIcon {
+    width: 28px;
+    height: 27px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logoCupIcon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.headerSlot {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerLogo {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.headerLogoLink {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+}
+
+.headerLogoLink svg {
+    display: block;
+    max-width: 100%;
+    max-height: 40px;
+    height: auto;
+    width: auto;
+}
+
+@media (min-width: 769px) {
+    .headerLogoLink svg {
+        max-height: 42px;
+    }
+}
+
+.navScroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .NavbarContent {
+        max-height: none;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    .NavbarContent.narrow,
+    .NavbarContent.wide {
+        width: 100%;
+    }
+}

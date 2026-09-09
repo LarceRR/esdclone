@@ -1,0 +1,43 @@
+.Navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Navigation>svg {
+    width: 18px;
+}
+
+.link {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: left;
+    color: var(--text-color-secondary);
+}
+
+.link.toggled {
+    justify-content: flex-start;
+}
+
+.link span {
+    font-size: var(--font-nav-label, 14px);
+    color: var(--text-color-secondary);
+    white-space: nowrap;
+}
+
+.selected {
+    color: var(--primary-color);
+}
+
+.selected span {
+    color: var(--primary-color);
+}
+
+.selected svg path {
+    stroke: var(--primary-color);
+    fill: var(--primary-color);
+}

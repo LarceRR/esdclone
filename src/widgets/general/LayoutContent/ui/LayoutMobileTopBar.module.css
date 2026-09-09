@@ -1,0 +1,51 @@
+.bar {
+    display: none;
+    flex-shrink: 0;
+    align-items: center;
+    min-height: 48px;
+    padding: 0.25rem 0rem 0.5rem 0rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .bar {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        column-gap: 0.5rem;
+    }
+}
+
+.side {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.side:first-child {
+    justify-content: flex-start;
+}
+
+.side:last-child {
+    justify-content: flex-end;
+}
+
+.menuBtn {
+    margin-left: -0.25rem;
+}
+
+.logoWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    justify-self: center;
+}
+
+.logoWrap svg {
+    display: block;
+    max-width: min(10rem, 52vw);
+    max-height: 40px;
+    width: auto;
+    height: auto;
+}

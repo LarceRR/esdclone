@@ -1,0 +1,9 @@
+.Reviews,
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form {
+    gap: 0.5rem;
+}

@@ -1,0 +1,40 @@
+/*tabs*/
+.tabs {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.75rem;
+}
+.tabs::-webkit-scrollbar {
+    height: 0.25rem;
+}
+.tabs > button {
+    padding: 0.35rem 0.25rem;
+    min-width: fit-content;
+    border: inherit;
+    border-radius: 0;
+    white-space: nowrap;
+    opacity: 0.5;
+}
+.tabs > button:hover {
+    border: inherit;
+}
+.tabs > button:disabled {
+    opacity: 1;
+    color: var(--text-color);
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    /*align-items: end;*/
+    gap: 0.5rem;
+}

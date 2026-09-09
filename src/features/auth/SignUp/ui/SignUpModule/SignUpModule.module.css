@@ -1,0 +1,9 @@
+.SignUpModule {
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(34, 60, 80, 0.2);
+}
+.form {
+}
+.advantages {
+}

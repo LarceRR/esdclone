@@ -1,0 +1,126 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.fieldLabel {
+    color: rgba(50, 50, 50, 0.78);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.input {
+    width: 100%;
+    min-height: 2.35rem;
+    border: 1px solid rgba(50, 50, 50, 0.14);
+    border-radius: 0.5rem;
+    padding: 0 0.75rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.input:focus {
+    border-color: var(--primary-color);
+}
+
+.iconModeTabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.iconModeTab,
+.iconModeTabActive {
+    min-height: 2rem;
+    padding: 0 0.85rem;
+    border: 1px solid rgba(244, 113, 57, 0.18);
+    border-radius: 0.5rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.iconModeTabActive {
+    border-color: var(--primary-color);
+    background: var(--bg-primary);
+    color: var(--primary-color);
+}
+
+.iconBlock {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.iconPreview {
+    display: flex;
+    width: 4.5rem;
+    height: 4.5rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(50, 50, 50, 0.12);
+    border-radius: 0.65rem;
+    background: var(--bg-gray);
+}
+
+.iconPreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.iconPreviewEmpty {
+    color: rgba(50, 50, 50, 0.4);
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0.35rem;
+}
+
+.uploadLabel {
+    display: inline-flex;
+    min-height: 2.35rem;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(244, 113, 57, 0.4);
+    border-radius: 0.5rem;
+    background: var(--bg-secondary);
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.uploadLabel input {
+    display: none;
+}
+
+.iconControls {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.55rem;
+    min-width: min(100%, 14rem);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 0.25rem;
+}

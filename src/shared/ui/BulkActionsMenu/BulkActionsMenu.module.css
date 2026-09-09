@@ -1,0 +1,72 @@
+.root {
+    position: relative;
+    display: inline-flex;
+}
+
+.trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    cursor: pointer;
+}
+
+.trigger span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.trigger:disabled {
+    cursor: default;
+    opacity: 0.45;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-top: 4px solid currentColor;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    flex: 0 0 auto;
+}
+
+.menu {
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    left: 0;
+    z-index: 12;
+    display: flex;
+    min-width: 14rem;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(244, 113, 57, 0.14);
+    border-radius: 0.6rem;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(34, 60, 80, 0.14);
+}
+
+.menu button {
+    border: none;
+    background: #fff;
+    padding: 0.75rem 0.9rem;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background: rgba(244, 113, 57, 0.08);
+    color: var(--primary-color);
+}
+
+.dangerItem {
+    color: #d14343;
+}
+
+.dangerItem:hover {
+    background: rgba(209, 67, 67, 0.08) !important;
+    color: #b91c1c !important;
+}

@@ -1,0 +1,176 @@
+.RefundRequestModule {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.refundFiltersGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.orderNo {
+    font-weight: 700;
+}
+
+.refundTextCell {
+    min-width: 9.5rem;
+    max-width: 14rem;
+    white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: left !important;
+    line-height: 1.35;
+    vertical-align: top;
+}
+
+.refundTableWrap .refundTable td.moneyCell {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.refundTableWrap {
+    -webkit-overflow-scrolling: touch;
+}
+
+.refundTableWrap .refundTable {
+    min-width: 58rem;
+}
+
+.refundTableWrap .refundTable th.refundTextCell,
+.refundTableWrap .refundTable td.refundTextCell {
+    white-space: normal !important;
+}
+
+.refundTableWrap .refundTable th:nth-child(1),
+.refundTableWrap .refundTable td:nth-child(1) {
+    min-width: 2.5rem;
+}
+
+.refundTableWrap .refundTable th:nth-child(2),
+.refundTableWrap .refundTable td:nth-child(2) {
+    min-width: 8.5rem;
+}
+
+.refundTableWrap .refundTable th:nth-child(3),
+.refundTableWrap .refundTable td:nth-child(3) {
+    min-width: 7.5rem;
+}
+
+.refundTableWrap .refundTable td.moneyCell {
+    min-width: 5.75rem;
+}
+
+.refundTableWrap .refundTable th:nth-child(8),
+.refundTableWrap .refundTable td:nth-child(8) {
+    min-width: 7.5rem;
+}
+
+@media (max-width: 768px) {
+    .refundFiltersGrid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .refundTableWrap .refundTable th,
+    .refundTableWrap .refundTable td {
+        padding: 0.55rem 0.35rem;
+        font-size: 0.72rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .refundFiltersPanelOpen {
+        max-height: 20rem;
+    }
+}
+
+.modalBody {
+    position: relative;
+    min-height: 8rem;
+}
+
+.bulkModalHint {
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: rgba(50, 50, 50, 0.78);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.formFieldWide {
+    grid-column: 1 / -1;
+}
+
+.formField span {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: rgba(50, 50, 50, 0.72);
+}
+
+.formField input,
+.formField select,
+.formField textarea {
+    width: 100%;
+    min-height: 2.25rem;
+    border: 1px solid rgba(50, 50, 50, 0.14);
+    border-radius: 0.45rem;
+    padding: 0.55rem 0.7rem;
+    background: #fff;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.formField textarea {
+    min-height: 5rem;
+    resize: vertical;
+}
+
+.detailGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem;
+    border-radius: 0.65rem;
+    background: rgba(50, 50, 50, 0.025);
+}
+
+.detailItem span {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: rgba(50, 50, 50, 0.72);
+}
+
+.detailItem b {
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    .formGrid,
+    .detailGrid {
+        grid-template-columns: 1fr;
+    }
+}

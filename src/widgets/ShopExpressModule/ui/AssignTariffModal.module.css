@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 18rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.field select {
+    min-height: 2.4rem;
+    border: 1px solid rgba(50, 50, 50, 0.15);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.6rem;
+}
+
+.actions {
+    display: flex;
+    gap: 0.65rem;
+    justify-content: flex-end;
+}

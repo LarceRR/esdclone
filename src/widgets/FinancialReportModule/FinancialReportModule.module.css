@@ -1,0 +1,156 @@
+.FinancialReportModule {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summaryPanel {
+    border: 1px solid rgba(244, 113, 57, 0.12);
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(34, 60, 80, 0.06);
+    padding: 1rem 1.2rem;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.summaryCard {
+    display: flex;
+    min-height: 5.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.75rem;
+    border-radius: 0.65rem;
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+}
+
+.summaryCard strong {
+    font-size: clamp(1.1rem, 0.9rem + 0.5vw, 1.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.summaryCard span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.periodFiltersPanel {
+    display: none;
+}
+
+.reportTableWrap .reportTable {
+    min-width: 40rem;
+}
+
+@media (max-width: 768px) {
+    .reportTableWrap .reportTable {
+        width: 100%;
+        min-width: 28rem;
+        max-width: 100%;
+        table-layout: fixed;
+    }
+
+    .reportTableWrap .reportTable th,
+    .reportTableWrap .reportTable td {
+        padding: 0.55rem 0.35rem;
+        font-size: 0.72rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .reportTableWrap .reportTable th:nth-child(1),
+    .reportTableWrap .reportTable td:nth-child(1) {
+        width: 2.35rem;
+        min-width: 2.35rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .reportTableWrap .reportTable th:nth-child(2),
+    .reportTableWrap .reportTable td:nth-child(2) {
+        width: 24%;
+        min-width: 4.75rem;
+    }
+
+    .reportTableWrap .reportTable th:nth-child(3),
+    .reportTableWrap .reportTable td:nth-child(3) {
+        width: 18%;
+        min-width: 3.5rem;
+    }
+
+    .reportTableWrap .reportTable th:nth-child(4),
+    .reportTableWrap .reportTable td:nth-child(4) {
+        width: 20%;
+        min-width: 3.75rem;
+    }
+
+    .reportTableWrap .reportTable th:nth-child(5),
+    .reportTableWrap .reportTable td:nth-child(5) {
+        width: 18%;
+        min-width: 3.25rem;
+    }
+
+    .reportTableWrap .reportTable th:nth-child(6),
+    .reportTableWrap .reportTable td:nth-child(6) {
+        width: 18%;
+        min-width: 3.25rem;
+    }
+}
+
+@media (max-width: 1180px) {
+    .summaryGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .summaryGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .summaryCard {
+        min-height: 4.75rem;
+        padding: 0.65rem;
+    }
+
+    .summaryCard strong {
+        font-size: 1.05rem;
+    }
+
+    .summaryCard span {
+        font-size: 0.72rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .summaryGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 320px) {
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .periodFiltersPanel {
+        display: block;
+    }
+
+    .periodFiltersPanelOpen {
+        max-height: 8rem !important;
+    }
+}
