@@ -6,6 +6,10 @@
     color: var(--text-color, #333);
 }
 
+.toTopSpan {
+    color: #fff;
+}
+
 .intro {
     margin-bottom: 0.9rem;
     padding: 1rem 1.15rem;
@@ -47,8 +51,7 @@
 .contentsList {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.4rem;
-    row-gap: 0.22rem;
+    row-gap: 12px;
 }
 
 .contentsGroup {

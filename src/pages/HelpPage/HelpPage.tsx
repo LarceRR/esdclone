@@ -433,7 +433,7 @@ const HelpPage = () => {
                     onClick={scrollToTop}
                 >
                     <ArrowUpwardRoundedIcon />
-                    <span>Наверх</span>
+                    <span className={`${styles.toTopSpan}`}>Наверх</span>
                 </button>
             </main>
         </LayoutContent>
